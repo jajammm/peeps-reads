@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('banner_ads', function (Blueprint $table) {
             $table->id();
+            $table->string('link');
+            $table->string('type');
+            $table->string('thumbnail');
+            $table->enum('is_active', ['active', 'inactive'])->default('inactive');
+            $table->softDeletes(); 
             $table->timestamps();
         });
     }
