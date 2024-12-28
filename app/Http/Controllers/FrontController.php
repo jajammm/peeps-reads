@@ -19,6 +19,11 @@ class FrontController extends Controller
         ->latest()
         ->take(3)
         ->get();
+
+        $latest_articles = ArticleNews::with('category')
+        ->latest()
+        ->take(3)
+        ->get();
     
         $featured_articles = ArticleNews::with('category')
         ->where('is_featured', 'featured')
@@ -82,7 +87,7 @@ class FrontController extends Controller
         ->get()
         ->first();
 
-        return view('front.index', compact('automotive_articles', 'automotive_featured_articles', 'business_articles', 'business_featured_articles', 'entertainment_featured_articles', 'entertainment_articles', 'categories', 'articles', 'authors', 'featured_articles', 'bannerads'));
+        return view('front.index', compact('latest_articles','automotive_articles', 'automotive_featured_articles', 'business_articles', 'business_featured_articles', 'entertainment_featured_articles', 'entertainment_articles', 'categories', 'articles', 'authors', 'featured_articles', 'bannerads'));
     }
 
     public function category(Category $category){
@@ -95,5 +100,17 @@ class FrontController extends Controller
         ->first();
 
         return view('front.category', compact('category', 'categories', 'bannerads'));
+    }
+
+    public function author(Author $author){
+        $categories = Category::all();
+
+        $bannerads = BannerAds::where('is_active', 'active')
+        ->where('type', 'banner')
+        ->inRandomOrder()
+        // ->take(1)
+        ->first();
+
+        return view('front.author', compact('author' , 'categories', 'bannerads'));
     }
 }
