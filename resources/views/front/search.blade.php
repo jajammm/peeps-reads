@@ -6,17 +6,6 @@
             Explore Hot Trending <br />
             Good News Today
         </h1>
-        <form action="#">
-            <label for="search-bar"
-                class="w-[500px] flex p-[12px_20px] transition-all duration-300 gap-[10px] ring-1 ring-[#E8EBF4] focus-within:ring-2 focus-within:ring-[#FF6B18] rounded-[50px] group">
-                <div class="w-5 h-5 flex shrink-0">
-                    <img src="assets/images/icons/search-normal.svg" alt="icon" />
-                </div>
-                <input autocomplete="off" type="text" id="search-bar" name="search-bar"
-                    placeholder="Search hot trendy news today..."
-                    class="appearance-none font-semibold placeholder:font-normal placeholder:text-[#A3A6AE] outline-none focus:ring-0 w-full" />
-            </label>
-        </form>
     </section>
     <section id="search-result" class="max-w-[1130px] mx-auto flex items-start flex-col gap-[30px] mt-[70px] mb-[100px]">
         <h2 class="text-[26px] leading-[39px] font-bold">Search Result: <span>{{ ucfirst($keyword) }}</span></h2>

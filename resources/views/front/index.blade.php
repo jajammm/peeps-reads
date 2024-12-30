@@ -115,7 +115,7 @@
                 Latest For You <br />
                 in Entertainment
             </h2>
-            <a href="categoryPage.html"
+            <a href="{{ route('front.category', 'Entertainment') }}"
                 class="rounded-full p-[12px_22px] flex gap-[10px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#FF6B18]">Explore
                 All</a>
         </div>
@@ -171,7 +171,7 @@
                 Latest For You <br />
                 in Business
             </h2>
-            <a href="categoryPage.html"
+            <a href="{{ route('front.category', 'Business') }}"
                 class="rounded-full p-[12px_22px] flex gap-[10px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#FF6B18]">Explore
                 All</a>
         </div>
@@ -225,7 +225,7 @@
                 Latest For You <br />
                 in Automotive
             </h2>
-            <a href="categoryPage.html"
+            <a href="{{ route('front.category', 'Automotive') }}"
                 class="rounded-full p-[12px_22px] flex gap-[10px] font-semibold transition-all duration-300 border border-[#EEF0F7] hover:ring-2 hover:ring-[#FF6B18]">Explore
                 All</a>
         </div>
@@ -238,7 +238,7 @@
                 <div class="card-detail w-full flex items-end p-[30px] relative z-20">
                     <div class="flex flex-col gap-[10px]">
                         <p class="text-white">Featured</p>
-                        <a href="details.html"
+                        <a href="{{ route('front.details', $automotive_featured_articles->slug) }}"
                             class="font-bold text-[30px] leading-[36px] text-white hover:underline transition-all duration-300">{{ $automotive_featured_articles->name }}</a>
                         <p class="text-white">{{ $automotive_featured_articles->created_at->format('M d, Y') }}</p>
                     </div>

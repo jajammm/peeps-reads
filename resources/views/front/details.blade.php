@@ -20,26 +20,6 @@
                         </div>
                     </div>
                 </a>
-                <div id="Rating" class="flex items-center gap-1">
-                    <div class="flex items-center">
-                        <div class="w-4 h-4 flex shrink-0">
-                            <img src="assets/images/icons/Star 1.svg" alt="star">
-                        </div>
-                        <div class="w-4 h-4 flex shrink-0">
-                            <img src="assets/images/icons/Star 1.svg" alt="star">
-                        </div>
-                        <div class="w-4 h-4 flex shrink-0">
-                            <img src="assets/images/icons/Star 1.svg" alt="star">
-                        </div>
-                        <div class="w-4 h-4 flex shrink-0">
-                            <img src="assets/images/icons/Star 1.svg" alt="star">
-                        </div>
-                        <div class="w-4 h-4 flex shrink-0">
-                            <img src="assets/images/icons/Star 1.svg" alt="star">
-                        </div>
-                    </div>
-                    <p class="font-semibold text-xs leading-[18px]">(12,490)</p>
-                </div>
             </div>
         </div>
         <div class="w-full h-[500px] flex shrink-0 overflow-hidden">
